@@ -69,12 +69,13 @@ task createClasspathManifest {
         outputDir.mkdirs()
         file("$outputDir/plugin-classpath.txt").text =
                 file('out/production/classes').absolutePath + "\n" +
-                sourceSets.main.runtimeClasspath.join("\n")
+                        sourceSets.main.runtimeClasspath.join("\n")
     }
 }
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     testCompile 'junit:junit:4.12'
     testCompile 'com.natpryce:hamkrest:1.3.0.0'
 }

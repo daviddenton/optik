@@ -39,7 +39,7 @@ cobertura.coverageFormats = ['html', 'xml']
 cobertura.coverageSourceDirs = ['src/main/kotlin']
 
 version = project.hasProperty('releaseVersion') ? project.releaseVersion : '0.0.1'
-group = 'org.optik'
+group = 'icu.optik'
 archivesBaseName = 'optik'
 description = 'Kotlin lens utility lib'
 
